@@ -6,7 +6,8 @@ router.get('/', async (req, res) => {
     const blogpostData = await Blogpost.findAll()
     const blogposts = blogpostData.map((blogpost) => blogpost.get({ plain : true }));
     res.render('homepage', {
-      blogposts
+      blogposts,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -22,14 +23,12 @@ router.get('/dashboard', async (req, res) => {
 })
 
 
-
-
 router.get('/login', async (req, res) => {
-  try {
-      res.render('login');
-  } catch (err) {
-    res.status(500).json(err);
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
   }
+  res.render('login')
 });
 
 router.get('/signup', async (req, res) => {
