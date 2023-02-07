@@ -32,6 +32,27 @@ router.get('/dashboard', async (req, res) => {
   }
 })
 
+router.get('/blogpost/:id', async (req, res) => {
+  try{
+    const blogpostData = await Blogpost.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username']
+        },
+      ],
+    });
+
+    const blogposts = blogpostData.get({ plain: true});
+
+    res.render('blogpost', {
+      ...blogposts,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 router.get('/login', async (req, res) => {
   if (req.session.logged_in) {

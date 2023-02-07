@@ -1,7 +1,5 @@
 <p>Homepage</p>
 {{#each blogposts as |blogpost|}}
-<p>{{title}}</p>
-<p>{{content}}</p>
-<p>{{user.username}}</p>
-<p>{{date_created}}</p>
+
+<p><a href="blogpost/{{id}}">{{title}} {{date_created}}</a></p>
 {{/each}}
