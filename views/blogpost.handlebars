@@ -3,11 +3,9 @@
 <p>{{user.username}}</p>
 <p>{{format_date date_created}}</p>
 
-<br>
-
-{{id}}
-{{user_id}}
+{{#equals user_id session_id}}
 <a href="#" data-blogTitleId="{{id}}" class="delete">Delete</a>
+{{/equals}}
 
 
 <br>
