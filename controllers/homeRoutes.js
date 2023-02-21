@@ -53,7 +53,7 @@ router.get('/blogpost/:id', async (req, res) => {
 
   const blogposts = blogpostData.get({ plain: true});
 
-  console.log(blogposts.comments[0].user)
+  console.log(blogposts)
 
   res.render('blogpost', {
       ...blogposts,

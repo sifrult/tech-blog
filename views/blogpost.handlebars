@@ -6,7 +6,7 @@
 <br>
 
 {{#each comments}}
-<p>{{comment_text}}, {{user.username}}</p>
+<p>{{comment_text}}, {{user.username}}, {{format_date date_created}}</p>
 
 {{/each}}
 {{#if logged_in}}
