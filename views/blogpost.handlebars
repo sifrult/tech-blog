@@ -5,9 +5,14 @@
 
 <br>
 
+{{id}}
+{{user_id}}
+<a href="#" data-blogTitleId="{{id}}" class="delete">Delete</a>
+
+
+<br>
 {{#each comments}}
 <p>{{comment_text}}, {{user.username}}, {{format_date date_created}}</p>
-
 {{/each}}
 {{#if logged_in}}
 <br>
@@ -17,4 +22,6 @@ Add a comment:
     <button type="submit">Post</button>
 </form>
 {{/if}}
+
 <script src="/js/blogpost.js"></script>
+<script src="/js/delete.js"></script>

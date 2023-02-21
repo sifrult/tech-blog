@@ -1,8 +1,8 @@
 {{#if logged_in}}<p>Dashboard</p>
 
 {{#each blogposts as |blogpost|}}
-
-<p>{{blogpost.title}}</p>
+<p><a href="/blogpost/{{id}}">{{blogpost.title}}</a></p>
+<p></p>
 {{/each}}
 
 <p><a href="/dashboard/addPost">Add a post</a></p>
