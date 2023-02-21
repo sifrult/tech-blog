@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Blogpost, User } = require('../models');
+const { Blogpost, User , Comment} = require('../models');
 
 router.get('/', async (req, res) => {
   try {
@@ -16,7 +16,6 @@ router.get('/', async (req, res) => {
       blogposts,
       logged_in: req.session.logged_in
     });
-    console.log(blogposts)
   } catch (err) {
     res.status(500).json(err);
   }
@@ -40,15 +39,26 @@ router.get('/blogpost/:id', async (req, res) => {
           model: User,
           attributes: ['username']
         },
+        {
+          model: Comment,
+          include: [
+            {
+              model: User,
+              attributes: ['username'],
+            }
+          ]
+        }
       ],
-    });
+  });
 
-    const blogposts = blogpostData.get({ plain: true});
+  const blogposts = blogpostData.get({ plain: true});
 
-    res.render('blogpost', {
+  console.log(blogposts)
+
+  res.render('blogpost', {
       ...blogposts,
       logged_in: req.session.logged_in
-    });
+  });
   } catch (err) {
     res.status(500).json(err);
   }

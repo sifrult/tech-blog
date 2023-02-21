@@ -1,4 +1,20 @@
 <p>{{title}}</p>
 <p>{{content}}</p>
 <p>{{user.username}}</p>
-<p>{{date_created}}</p>
+<p>{{format_date date_created}}</p>
+
+<br>
+
+{{#each comments}}
+<p>{{comment_text}}, {{user}}</p>
+
+{{/each}}
+{{#if logged_in}}
+<br>
+Add a comment:
+<form class="comment-form">
+    <textarea id="comment"></textarea>
+    <button type="submit">Post</button>
+</form>
+{{/if}}
+<script src="/js/blogpost.js"></script>
