@@ -3,8 +3,13 @@
 <p>{{user.username}}</p>
 <p>{{format_date date_created}}</p>
 
+{{user_id}} {{session_id}}
 {{#equals user_id session_id}}
-<a href="#" data-blogTitleId="{{id}}" class="delete">Delete</a>
+<button class="deleteBtn">Delete</button>
+<br>
+<button id="update">Update</button>
+{{else}}
+nothing
 {{/equals}}
 
 
@@ -23,3 +28,8 @@ Add a comment:
 
 <script src="/js/blogpost.js"></script>
 <script src="/js/delete.js"></script>
+<script>
+  document.querySelector("#update").addEventListener("click", function() {
+    window.location.href = `/blogpost/editPost/{{id}}`;
+  });
+</script>
