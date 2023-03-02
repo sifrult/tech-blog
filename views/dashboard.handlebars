@@ -1,10 +1,11 @@
-{{#if logged_in}}<p>Dashboard</p>
+{{#if logged_in}}
 
 {{#each blogposts as |blogpost|}}
-<p><a href="/blogpost/{{id}}">{{blogpost.title}}</a></p>
-<p></p>
+<a href="/blogpost/{{id}}" id="dashboard-container"><p>{{blogpost.title}}</p></a>
 {{/each}}
 
-<p><a href="/dashboard/addPost">Add a post</a></p>
+<div id="add-post-link">
+    <a href="/dashboard/addPost">Add a post</a>
+</div>
 
 {{/if}}

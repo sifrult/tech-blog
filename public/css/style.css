@@ -30,7 +30,7 @@ h1 {
 }
 
 /* Homepage */
-#homepage-container {
+#homepage-container, #dashboard-container {
     color: #deba93;
     text-decoration: none;
     font-size: 25px;
@@ -103,11 +103,13 @@ h2 {
     margin: 10px 0;
 }
 
-#sign-up {
+#sign-up, #add-post-link {
     text-align: center;
 }
 
-#sign-up > a {
+#sign-up > a, #add-post-link > a {
     color: #deba93;
     text-decoration: none;
 }
+
+/* Dashboard */
