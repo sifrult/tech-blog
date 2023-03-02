@@ -1,5 +1,5 @@
-<p>Homepage</p>
 {{#each blogposts as |blogpost|}}
 
-<p><a href="/blogpost/{{id}}">{{title}} {{format_date date_created}}</a></p>
+<a href="/blogpost/{{id}}" id="homepage-container"><p>{{title}} <span id="homepage-date">{{format_date date_created}}</span></p></a>
+
 {{/each}}

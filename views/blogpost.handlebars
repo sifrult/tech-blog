@@ -1,22 +1,23 @@
+<div id="blogpost-container">
 <p>{{title}}</p>
 <p>{{content}}</p>
 <p>{{user.username}}</p>
 <p>{{format_date date_created}}</p>
+</div>
 
-{{user_id}} {{session_id}}
 {{#equals user_id session_id}}
 <button class="deleteBtn">Delete</button>
 <br>
 <button id="update">Update</button>
-{{else}}
-nothing
 {{/equals}}
-
 
 <br>
 {{#each comments}}
+<div>
 <p>{{comment_text}}, {{user.username}}, {{format_date date_created}}</p>
+</div>
 {{/each}}
+
 {{#if logged_in}}
 <br>
 Add a comment:
