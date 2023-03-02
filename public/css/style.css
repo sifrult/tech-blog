@@ -1,5 +1,6 @@
 body {
     background-color: #081521;
+    font-family: 'Mukta Malar', sans-serif;
 }
 
 /* Header */
@@ -7,6 +8,7 @@ header {
     text-align: center;
     height: 80px;
     margin: 10px 0;
+    color: #1ba098;
 }
 
 nav {
@@ -16,13 +18,12 @@ nav {
 }
 
 nav > a {
-    color: #1ba098;
     text-decoration: none;
     font-size: 20px;
+    color: #1ba098;
 }
 
 h1 {
-    color: #deb992;
     font-size: 35px;
     height: 50px;
     padding: 10px;
@@ -32,7 +33,7 @@ h1 {
 #homepage-container {
     color: #deba93;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -46,5 +47,33 @@ h1 {
 
 #homepage-date {
     color: #798f9d;
-    font-size: 15px;
+    font-size: 18px;
+}
+
+/* Blogpost */
+#blogpost-container, #comment-container {
+    background-color: #001d31;
+    color: #798f9d;
+    margin: 15px;
+    border-radius: 20px;
+    font-size: 22px;
+    padding: 10px;
+}
+
+#blogpost-content {
+    margin: 8px 0;
+}
+
+#blogpost-user-date, #comment-user-date {
+    color: #475865;
+    text-align: end;
+    font-size: 20px;
+}
+
+#comment-container {
+    text-align: end;
+}
+
+h2 {
+    color: #deba93;
 }
