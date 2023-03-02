@@ -51,7 +51,7 @@ h1 {
 }
 
 /* Blogpost */
-#blogpost-container, #comment-container, #add-comment {
+#blogpost-container, #comment-container, #add-comment, #login-form, #signup-form {
     background-color: #001d31;
     color: #798f9d;
     margin: 15px;
@@ -89,10 +89,25 @@ h2 {
     margin: 5px 0;
 }
 
-#comment-submit {
+#comment-submit, #submit_login, #submit-signup {
     border-radius: 6px;
     border: none;
     padding: 6px 14px;
     background-color: #001d31;
     color: #798f9d;
+}
+
+
+/* Login and Signup */
+#login-form > form > div, #signup-form > form > div{
+    margin: 10px 0;
+}
+
+#sign-up {
+    text-align: center;
+}
+
+#sign-up > a {
+    color: #deba93;
+    text-decoration: none;
 }
