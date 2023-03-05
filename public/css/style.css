@@ -146,7 +146,7 @@ h2 {
     height: 300px;
 }
 
-input[type=text], textarea {
+input[type=text], input[type=password], textarea {
     background-color : #081521;
     color: #deba93;
     border: none;
