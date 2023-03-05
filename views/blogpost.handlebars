@@ -8,9 +8,10 @@
 </div>
 
 {{#equals user_id session_id}}
-<button class="deleteBtn">Delete</button>
-<br>
-<button id="update">Update</button>
+<div id="delete-update-btns">
+  <button class="deleteBtn" id="delete-btn">Delete</button>
+  <button id="update" class="update-btn">Edit</button>
+</div>
 {{/equals}}
 
 {{#each comments}}

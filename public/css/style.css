@@ -51,7 +51,13 @@ h1 {
 }
 
 /* Blogpost */
-#blogpost-container, #comment-container, #add-comment, #login-form, #signup-form {
+#blogpost-container,
+#comment-container,
+#add-comment,
+#login-form,
+#signup-form,
+#add-post-container,
+#edit-post-container {
     background-color: #001d31;
     color: #798f9d;
     margin: 15px;
@@ -89,7 +95,13 @@ h2 {
     margin: 5px 0;
 }
 
-#comment-submit, #submit_login, #submit-signup {
+#comment-submit,
+#submit_login,
+#submit-signup,
+#delete-btn,
+.update-btn,
+.add-post-sbmt,
+.edit-post-sbmt {
     border-radius: 6px;
     border: none;
     padding: 6px 14px;
@@ -97,9 +109,17 @@ h2 {
     color: #798f9d;
 }
 
+#delete-update-btns {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 /* Login and Signup */
-#login-form > form > div, #signup-form > form > div{
+#login-form > form > div,
+#signup-form > form > div,
+#add-post-container > div,
+#edit-post-container > div{
     margin: 10px 0;
 }
 
@@ -112,4 +132,58 @@ h2 {
     text-decoration: none;
 }
 
-/* Dashboard */
+/* Add and edit post */
+.add-post-title,
+.add-post-content,
+.edit-post-title,
+.edit-post-content {
+    outline: none;
+    width: 100%;
+    resize: vertical;
+}
+
+.add-post-content, .edit-post-content {
+    height: 300px;
+}
+
+input[type=text], textarea {
+    background-color : #081521;
+    color: #deba93;
+    border: none;
+}
+
+@media screen and (min-width: 600px) {
+    #homepage-container,
+    #dashboard-container,
+    #blogpost-container,
+    #comment-container,
+    #add-comment,
+    #login-form,
+    #signup-form,
+    #add-post-container,
+    #edit-post-container {
+        margin: 15px 80px;
+    }
+    .login-form, .signup-form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #homepage-container,
+    #dashboard-container,
+    #blogpost-container,
+    #comment-container,
+    #add-comment,
+    #login-form,
+    #signup-form,
+    #add-post-container,
+    #edit-post-container {
+        margin: 15px 20%;
+    }
+    nav {
+        margin: 0 20%;
+    }
+}
